@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio Bruna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/logo_principal.png" sizes="192x192" />
+  <link rel="stylesheet" href="css/style_home.css" />
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo da marca -->
+      <div class="logo">
+        <img src="assets/logo_1.png" alt="Logo Bruna" />
+      </div>
+
+      <!-- Menu de navegação -->
+      <div class="nav-right">
+        <!-- Botão hamburguer (mobile) -->
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <ul class="menu">
+          <li><a href="./index.html">Sobre Mim</a></li>
+          <li><a href="paginas/projetos.html">Projetos</a></li>
+          <li><a href="/paginas/habilidades.html">Habilidades</a></li>
+
+
+          <li class="menu-contato">
+            <a href="./paginas/contato.html" class="btn-contato">Contato</a>
+          </li>
+        </ul>
+        <div class="nav-action">
+          <a href="./paginas/contato.html" class="btn-contato">Contato</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+
+      <!-- Coluna esquerda -->
+      <div class="hero-text">
+
+        <span class="hero-badge">
+          UI/UX DESIGNER & TECH SPECIALIST
+        </span>
+
+        <h1 class="hero-title">
+          Bruna <span>Tech</span><strong>.</strong>
+        </h1>
+
+        <p class="hero-subtitle">
+          Arquitetando o futuro através do código e do design.
+        </p>
+
+        <p class="hero-description">
+          Olá! Sou a Bruna, apaixonada por transformar desafios complexos em soluções digitais simples, estratégicas e
+          memoráveis. Minha base em <strong>Tecnologia da Informação</strong> me permite ir além da estética — penso em performance,
+          lógica, escalabilidade e impacto.
+        </p>
+
+        <p class="hero-description">
+          Acredito que <strong>design é ponte</strong>: entre usuário e negócio, entre problema e solução, entre tecnologia e emoção.
+          Atualmente, aprofundo minha formação em UI/UX e exploro como a Inteligência Artificial pode potencializar
+          processos criativos e decisões estratégicas.
+        </p>
+
+        <p class="hero-description">
+          <strong>Meu foco?</strong> Criar produtos digitais que façam sentido — para quem usa e para quem investe.
+        </p>
+
+        <div class="hero-actions">
+          <a href="./paginas/projetos.html" class="btn-primary">
+            Ver Meus Projetos
+          </a>
+
+          <a href="./assets/Bruna-Silva_CV_UX-Designer_IA.pdf" class="btn-secondary btn-download" download>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>Baixar CV (PDF)</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Coluna direita (imagem) -->
+      <div class="hero-image-wrapper">
+        <!-- glow -->
+        <div class="hero-glow"></div>
+
+        <!-- molduras -->
+        <div class="frame frame-gradient"></div>
+        <div class="frame frame-outline"></div>
+
+        <!-- imagem -->
+        <div class="hero-image">
+          <img src="assets/minha_foto.png" alt="Bruna UI UX & Tech">
+
+          <!-- overlay vidro -->
+          <div class="hero-overlay">
+            <div class="status-glass">
+              <span class="status-dot"></span>
+              Pronta para novos desafios Tech
+            </div>
+          </div>
+        </div>
+      </div>
+  </section><!-- fim da hero -->
+  <!-- JS sempre no final -->
+  <script src="javascript/js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,736 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b1630, #050816);
+  color: white;
+  min-height: 120vh;
+}
+
+/* HEADER */
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  padding: 24px 50px;
+  z-index: 1000;
+}
+
+
+/* NAVBAR */
+.navbar {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1px 28px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(20, 35, 87, 0.65);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  box-shadow: #cbd5f533 0px 4px 30px;
+  /* 👇 CONTORNO */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  /* controla a distância entre menu e botão */
+}
+
+/* LOGO */
+.logo img {
+  height: 100px;
+  display: auto;
+  margin-left: 80px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  margin-right: 14px;
+  /* empurra o menu para a esquerda */
+}
+
+.menu a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: rgb(70, 211, 14);
+}
+
+/* botão hamburguer escondido no desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: white;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-contato {
+  display: none;
+}
+
+
+
+/* BOTÃO CONTATO */
+.btn-contato {
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-contato:hover {
+  background: #1d4ed8;
+}
+
+/* BOTÃO Chat */
+.btn-chat {
+  padding: 14px 24px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.btn-chat:hover {
+  background: #1d4ed8;
+}
+
+@keyframes fadeDown {
+
+  /* animação de fade e descer */
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+
+main,
+.container-projetos {
+  padding-top: 150px;
+  /* Aumente esse valor até o título "Projetos" aparecer totalmente */
+  margin-top: 0;
+}
+
+.container-projetos {
+  max-width: 1200px;
+  margin: 200px auto;
+  padding: 0 20px;
+  padding-top: 180px;
+  margin-top: 90px;
+  /* espaçamento do titulo projeto com menu */
+  padding-top: clamp(40px, 10vw, 80px);
+  /* mínimo 40px, ideal 10% da tela, máximo 80px */
+}
+
+
+
+.projetos-header {
+  margin-bottom: 40px;
+  margin-top: 0;
+  /* remove qualquer margem extra */
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #FFF;
+  font-weight: 800;
+  margin-bottom: 10px;
+  margin-top: -50px;
+
+}
+
+.section-subtitle {
+  color: #9CA3AF;
+  max-width: 600px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* GRID DOS CARDS */
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* ESTILO DO CARD */
+.card-projeto {
+  background: rgba(17, 24, 39, 0.4);
+  /* Fundo semi-transparente */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-10px);
+  border-color: #2D82C4;
+  /* Azul da sua logo ao passar o mouse */
+}
+
+.card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  filter: grayscale(20%);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.tag-uiux {
+  background: #2563EB;
+}
+
+.tag-branding {
+  background: #1E40AF;
+}
+
+.tag-social {
+  background: #1D4ED8;
+}
+
+.tag-label {
+  color: #6B7280;
+  font-size: 0.8rem;
+}
+
+.card-content h3 {
+  color: #FFF;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BOTÃO VER DETALHES */
+.btn-detalhes {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-detalhes:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFF;
+}
+
+
+/*Celular responsividade */
+@media (min-width: 320px) and (max-width: 680px) {
+
+  /* NAVBAR */
+  .navbar {
+    width: 90%;
+    height: 68px;
+    position: relative;
+    z-index: 10;
+    /*menu na frente da escrita */
+    padding: 12px 16px;
+
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+
+  .nav-action {
+    /* esconde botão fora do menu */
+    display: none;
+  }
+
+  /* LOGO */
+  .logo {
+    /* Centralizar logo no mobile */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .logo img {
+    height: 34%;
+    /* Aumentar o tamanho da logo no mobile */
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+
+  .navbar .logo img {
+    width: 65px;
+    /* aumenta aqui */
+    height: auto;
+    /* mantém proporção */
+  }
+
+
+  /* BOTÃO HAMBURGUER */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 16px;
+    /* lado direito da navbar */
+    z-index: 20;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+
+  /* MENU */
+  .menu {
+    display: none;
+    /* escondido até clicar */
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 68px;
+    /* logo abaixo da navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 340px;
+    /* controla largura do menu */
+    background: rgba(20, 35, 87, 0.95);
+    border-radius: 16px;
+    padding: 24px 16px;
+    gap: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10000;
+  }
+
+
+  /* MENU ATIVO */
+  .menu.active {
+    display: flex !important;
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeDown 0.3s ease;
+    margin-top: 5px;
+    max-width: 0px auto;
+  }
+
+
+  /* LINKS DO MENU */
+  .menu a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #e5e7eb;
+    padding: 10px 0;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    color: #60a5fa;
+  }
+
+  /* BOTÃO CONTATO DENTRO DO MENU */
+  .menu-contato {
+    display: block;
+    width: 100%;
+  }
+
+  .menu-contato .btn-contato {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .btn-contato.nav-action {
+    display: none;
+    /* só aparece dentro do menu */
+  }
+
+
+  /* Ajuste do container principal */
+  main,
+  .container-projetos {
+    padding-top: 120px;
+    /* espaço para navbar */
+  }
+
+
+  /*card projetos */
+
+
+  .grid-projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna para celular */
+    gap: 20px;
+    width: 100%;
+    /*largura do card */
+    max-width: 360px;
+    /* limite ideal para mobile */
+    margin: 0 auto;
+    /* centraliza */
+
+  }
+
+
+  .card-projeto {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+
+  .card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  .card-content {
+    padding: 16px;
+  }
+
+
+  .card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+
+  .card-content p {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+
+
+  .btn-detalhes {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+
+  .card-tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+
+  .section-subtitle {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+
+  .section-title {
+    margin-top: -150px;
+  }
+
+  .container-projetos {
+    margin-top: 125px;
+    white-space: normal;
+
+
+  }
+
+}
+
+
+@media (min-width: 681px) and (max-width: 767px) {
+
+  /* NAVBAR */
+  .navbar {
+    width: 90%;
+    height: 68px;
+    position: relative;
+    z-index: 10;
+    /*menu na frente da escrita */
+    padding: 12px 16px;
+
+  }
+
+
+  .header {
+    padding: 20px 0;
+  }
+
+  /* LOGO */
+  .logo {
+    /* Centralizar logo no mobile */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+
+  .logo img {
+    height: 34%;
+    /* Aumentar o tamanho da logo no mobile */
+    margin-left: 10px;
+    width: 100%;
+    align-items: center;
+    margin-right: 550px;
+    padding: 0 10px;
+  }
+
+
+  /* LINKS DO MENU */
+  .menu a {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 100;
+    color: #e5e7eb;
+    padding: 12px 0;
+    text-decoration: none;
+    display: block;
+
+  }
+
+  .menu a:hover {
+    color: #60a5fa;
+  }
+
+  .nav-right {
+    margin-left: 80px;
+    padding: 8px;
+  }
+
+  .navbar .logo img {
+    width: 65px;
+    /* aumenta aqui */
+    height: auto;
+    /* mantém proporção */
+  }
+
+  /* Ajuste do container principal */
+  main,
+  .container-projetos {
+    padding-top: 120px;
+    /* espaço para navbar */
+  }
+
+
+  /*card projetos */
+
+
+  .grid-projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 coluna para celular */
+    gap: 20px;
+    width: 100%;
+    /*largura do card */
+    max-width: 360px;
+    /* limite ideal para mobile */
+    margin: 0 auto;
+    /* centraliza */
+
+  }
+
+
+  .card-projeto {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+
+  .card-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+
+
+  .card-content {
+    padding: 16px;
+  }
+
+
+  .card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+
+  .card-content p {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+
+
+  .btn-detalhes {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+
+  .card-tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+
+  .section-subtitle {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+
+  .section-title {
+    margin-top: -150px;
+  }
+
+  .container-projetos {
+    margin-top: 10px;
+    white-space: normal;
+
+
+  }
+
+}
+
+
+/*tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* NAVBAR */
+  .navbar {
+    width: 100%;
+    /* mesma lógica dos projetos */
+    margin: 0 auto;
+    /* centraliza */
+    margin-left: 5px;
+    padding: 8px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* logo centralizada */
+    position: relative;
+    z-index: 10;
+  }
+
+  .logo {
+    margin-left: -70px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .menu {
+    justify-content: center;
+    padding: 12px 16px;
+
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .container-projetos {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas */
+    max-width: 900px;
+    margin-left: 50px;
+  }
+
+  .grid-projetos {
+    display: grid;
+    /* garantia */
+    grid-template-columns: repeat(2, 1fr);
+    /* 🔥 2 colunas */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+}
