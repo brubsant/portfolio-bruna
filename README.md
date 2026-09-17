@@ -62,32 +62,6 @@ portfolio_principal/
 ├── javascript/           # Arquivos JavaScript
 └── paginas/              # Arquivos HTML de cada tela
 ```
-
-## 💻 Clonando o projeto em outro computador
-
-Se quiser rodar este portfólio em outro computador (não o que já tem o projeto), siga os passos abaixo:
-
-1. No GitHub, entre no repositório, clique no botão verde **"Code"** e copie o link em **HTTPS**.
-2. Abra o VS Code em uma pasta qualquer do computador (ex: Área de Trabalho ou uma pasta "Projetos").
-3. Abra o terminal integrado: menu **Terminal > New Terminal** (ou `Ctrl + '` no Windows/Linux, `Cmd + '` no Mac).
-4. Digite o comando abaixo, substituindo pelo link copiado:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-5. Entre na pasta criada:
-   ```bash
-   cd nome-do-repositorio
-   ```
-6. Abra a pasta no VS Code:
-   ```bash
-   code .
-   ```
-7. Instale as dependências e rode o projeto:
-   ```bash
-   npm install
-   npm start
-   ```
-
 ## 📄 Licença
 
 Este projeto é de uso pessoal e está disponível apenas para fins de demonstração.
