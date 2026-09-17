@@ -1,0 +1,11 @@
+{
+  "name": "meu-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
